@@ -4,6 +4,7 @@ const END_POINT = '/trending/movie/week';
 const API_KEY = '345007f9ab440e5b86cef51be6397df1';
 const guard = document.querySelector('.js-guard');
 const list = document.querySelector('.js-list');
+
 let page = 1;
 
 const options = {
@@ -52,7 +53,7 @@ function createMarkup(arr) {
     return arr.map(({ original_title, poster_path, vote_average }) =>
     `<div class='card'>
     <li>
-    <img src="https://image.tmdb.org/t/p/w300${poster_path}" alt="${original_title}">
+    <img src="https://image.tmdb.org/t/p/w300${poster_path}" alt="${original_title}" >
     <h2>${original_title}</h2>
     <p class = 'rating-box'>${vote_average}</p>
     </li></div>`).join('');
